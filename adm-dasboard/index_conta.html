@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta - Okita Hokusai</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/7fc800e0b1.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../Assets/deviant-art.png">
+</head>
+<body onload="load()">
+    <nav class="nav-content">
+        <div class="nav-wrapper purple darken-4 z-depth-4">
+          <a href="#" class="brand-logo"><strong>FrameWork</strong></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="sass.html"><i class="fas fa-users"></i> Perfil</a></li>
+            <li><a href="index_conta.html"><i class="fas fa-search"></i> Conta</a></li>
+            <li><a href="collapsible.html"><i class="fas fa-sign-out-alt"></i>Sair</a></li>
+          </ul>
+        </div>
+      </nav>
+<div class="container">
+    <div class="row">
+        <div class="col m12 ">
+            <form >
+                <h3 class="center"> <strong>Cadastre uma Conta</strong> </h3>
+                <br>
+                <div class="input-field">
+                    <input type="text" class="validate" id="nome" placeholder="Conta">
+                    <label for="name">Nome</label>
+                </div>
+                <div class="input-field">
+                    <input type="number" class="validate" id="valor" placeholder="1000,00">
+                    <label for="valor">Valor</label>
+                </div>
+                <div class="input-field col s6">
+                    <select name="tipo" id="tipo">
+                        <option value="">Selecione uma opção!</option>
+                        <option value="Entrada">Entrada</option>
+                        <option value="Saída">Saída</option>
+                    </select>
+                    <label for="tipo">Tipo</label>
+                </div>
+                <div class="input-field col s6">  
+                    <select name="categoria" id="categoria">
+                        <option value="">Selecione uma opção!</option>
+                    </select>
+                    <label for="categoria">Categoria</label>
+                </div> 
+                <div class="input-field col m12 center ">
+                    <button type="button" onclick="handleSalvar()" class="btn white" id="salvar"> <strong>Salvar</strong> </button>
+                </div>
+                <br>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/contas.js"></script>
+<script>
+    $(document).ready(function(){
+    $('.currency').mask('#.##0,00', {reverse: true});
+    $('.sidenav').sidenav();
+    $('.modal').modal();
+    $('.tabs').tabs();
+    $('.tap-target').tapTarget();
+    $('.datepicker').datepicker();
+    $('.timepicker').timepicker();
+    })
+</script>
+</body>
+</html>

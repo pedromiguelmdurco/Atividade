@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem vindo - Okita Hokusai</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/7fc800e0b1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <link rel="icon" href="../Assets/deviant-art.png">
+</head>
+<body onload="load()">
+    <nav class="nav-content">
+        <div class="nav-wrapper purple darken-4 z-depth-4">
+          <a href="#" class="brand-logo"><strong>FrameWork</strong></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="index_perfil.html"><i class="fas fa-users"></i> Perfil</a></li>
+            <li><a href="index_conta.html"><i class="fas fa-search"></i> Conta</a></li>
+            <li><a href="collapsible.html"><i class="fas fa-sign-out-alt"></i>Sair</a></li>
+          </ul>
+        </div>
+      </nav>
+<div class="container">
+    <div class="row">
+        <div class="col m12 ">
+            <ul class="tabs ">
+                <li class="tab"><a class="btn purple darken-4" href="#geral"><i class="fab fa-cloudscale"></i>Visão Geral</a></li>
+                <li class="tab"><a class="btn purple darken-4" href="#categorias"><i class="fas fa-pen"></i>Lançamento</a></li>
+                <li class="tab"><a class="btn purple darken-4" href="#test3"><i class="fas fa-book"></i> Categorias</a></li>
+                <li class="tab"><a class="btn purple darken-4" href="#test4"><i class="fas fa-history"></i> Histórico</a></li>
+            </ul>
+        </div>
+        <br><br>
+        <div class="col m12 ">
+                <div id="geral"class="row">
+                    <div class="col m4 infos-graph center">
+                    <h3 class="center"><strong>Geral</strong> </h3>
+                    <p><b>Saldo:</b> <span id="saldo"></span></p>
+                    <p><b>Situação:</b> <span id="situacao"></span></p>
+                    <br>
+                    <p><b>Total de entradas:</b> <span id="entradas"></span></p>
+                    <p><b>Total de saidas:</b> <span id="saidas"></span></p>
+                    </div>
+                    <div class="col m8">
+                        <img src="../Assets/grafico.jpg" alt="">
+                    </div>
+                </div>
+                <div id="categorias" class="row">
+                    <div class="col m6 infos-graph center">
+                    <h3 class="center"><strong>Categorias Criadas</strong> </h3>
+                        <ul id="listaCategorias" class="categorias">
+                            
+                            <!--<li> <p> 2 - Lolzin <button class="btn red"><i class="fas fa-times"></i></button></p></li>-->
+                            
+                        </ul>
+                    </div>
+                    <div class="col m6 center">
+                        <div class="row infos-graph ">
+                            <h3> <strong> Criar Categoria</strong></h3>
+                            <div class="input-field col m12 center">
+                                <input type="text" id="addCat" placeholder="Impostos">
+                                <button onclick="handleCadastraCategorias()" class="btn-floating waves-effect  light-green accent-3">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+<script src="../js/home.js"></script>
+<script>
+    M.AutoInit();
+    $(document).ready(function(){
+    $('.currency').mask('#.##0,00', {reverse: true});
+    $('.sidenav').sidenav();
+    $('.modal').modal();
+    $('.tabs').tabs();
+    $('.tap-target').tapTarget();
+    $('.datepicker').datepicker();
+    $('.timepicker').timepicker();
+    })
+</script>
+</body>
+</html>

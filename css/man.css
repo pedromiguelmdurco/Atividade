@@ -1,0 +1,31 @@
+body{
+  overflow: hidden;
+  
+}
+.mainbg{
+  background-position:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 150vh;
+  min-height: 1050px;
+  width: 100%;
+  
+}
+
+.formbox{
+  background-color: rgba(255, 255, 255, 0.904) ;
+  display: block;
+  margin-top:25%;
+  height: 100%;
+  padding: 30px;
+}
+
+.formbox-cad{
+  background-color: rgba(255, 255, 255, 0.904) ;
+  margin-top:30%;
+  height: 100%;
+  padding: 30px;
+  width: 100%;
+  min-width: 500px;
+  margin-left: -10%;
+}

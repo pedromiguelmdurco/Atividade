@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem vindo - Okita Hokusai</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/7fc800e0b1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <link rel="icon" href="../Assets/deviant-art.png">
+</head>
+<body onload="load()">
+    <nav class="nav-content">
+        <div class="nav-wrapper purple darken-4 z-depth-4">
+          <a href="#" class="brand-logo"><strong>FrameWork</strong></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="index_perfil.html"><i class="fas fa-users"></i> Perfil</a></li>
+            <li><a href="index_conta.html"><i class="fas fa-search"></i> Conta</a></li>
+            
+            <li><a href="collapsible.html"><i class="fas fa-sign-out-alt"></i>Sair</a></li>
+          </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <form action="" class="center">
+                <h3> <strong> Altere Suas informações</strong></h3>
+                <div class="input-field col m12">
+                    <label>Nome</label>
+                    <input id="nome" type="text" placeholder="Jorge" class="validate">
+                </div>
+                <div class="input-field col m6">
+                    <label>Senha</label>
+                    <input id="senha" type="password" placeholder="" class="validate">
+                </div>
+                <div class="input-field col m6">
+                    <label>Confirmar Senha</label>
+                    <input id="confirm_senha" type="password" placeholder="" class="validate">
+                </div>
+                <div class="input-field col m12">
+                    <label>Email</label>
+                    <input id="email" type="email" placeholder="email@domain.com" class="validate">
+                </div>
+                <div class="input-field col m12">
+                    <button class="btn white textcolor wave-effect hover" id="salvar">Salvar</button>
+                </div>
+               
+            </form>
+        </div>
+    </div>
+<script src="../js/home.js"></script>
+<script>
+    M.AutoInit();
+ $(document).ready(function(){    
+ })
+</script>
+</body>
+</html>

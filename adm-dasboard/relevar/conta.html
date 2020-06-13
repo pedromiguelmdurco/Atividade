@@ -1,0 +1,177 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Contas - Okita Hokusai</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/7fc800e0b1.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../Assets/deviant-art.png">
+</head>
+<body onload="load()">
+    <header>
+            <ul id="slide-out" class="sidenav">
+                <li><div class="user-view">
+                  <div class="background">
+                    <img src="../Assets/profile-bg.jpg">
+                  </div>
+                  <a href="#user"><img class="circle" src="../Assets/profile.jfif"></a>
+                  <a href="#name"><span id="nome" class="white-text name">Okita Hokusai</span></a>
+                  <a href="#email"><span id="email" class="white-text email">21800014@aluno.cotemig.com.br</span></a>
+                </div></li>
+                <li><a href="adm_profile.html"><i class="fas fa-user-circle"></i>Perfil</a></li>
+                <li><a href="adm_users.html"><i class="fas fa-signal"></i>Usuários</a></li>
+                <li><div class="divider"></div></li>
+                <li><a class="subheader">Contas</a></li>
+                <li><a class="waves-effect" href="adm_conta.html">Minhas Contas</a></li>
+                <li><a class="waves-effect" href="#!">Ajuda</a></li>
+              </ul>
+    </header>
+    <main class="container">
+        <section class="row">
+            <div>
+                <a href="#" data-target="slide-out" class="yellow darken-1 btn sidenav-trigger"><i class="fas fa-bars"></i></a>  
+                <p>Minhas Contas</p>
+                <a href="../index.html"><i class="fas fa-sign-in-alt"></i>Sair</a>
+            </div>
+        </section>
+        <section class="container"></section>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center">
+                    <button id="registrar"  class="btn wave pulse yellow darken-1 modal-trigger" data-target="modal2" >Registrar uma nova conta</button>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col m12">
+                        <div class="card ">
+                          <div class="card-image ">
+                            <img src="../Assets/profile-bg.jpg">
+                            <span class="card-title black-text "> <strong id="NumeroDaConta">7176 - 48029 6</strong></span>
+                          </div>
+                          <div class="card-content">
+                            <H4>Visão Geral</H4>
+                            <br>
+                            <p><b>Saldo:</b> <span id="SaldoDaConta">R$5000,00</span></p>
+                            <P><b>Situação:</b> <span id="SituacaoDaConta">Positiva</span></P>
+                            <p><b>Ultima alteração:</b> <span id="alteraçãoDeMobilizacao">30/10 as 23:55</span></p>
+                          </div>
+                          <div class="card-content">
+                            <H4>Histórico</H4>
+                          <div id="HistoricoDaConta" class="history-account">
+                            <p class="plus"> <b>30/10 as 13:25</b> <i class="fas fa-arrow-up"></i> R$500,00 - Depósito</p>
+                            <p class="minus"> <b>27/10 as 20:00</b> <i class="fas fa-arrow-down"></i> R$500,00 - Contas - Cartão de Credito</p>
+                            <p class="minus"> <b>26/10 as 01:46</b> <i class="fas fa-arrow-down"></i> R$100,00 - Outros - Outros</p>
+                            
+                          </div>
+                          </div>
+                          <div class="card-action">
+                            <button  id="mobilizar" class="btn yellow darken-1 waves-effect modal-trigger" data-target="modal2">Mobilizar Gastos</button>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>  
+    </main>
+    <div id="modal2" class="modal">
+        <div class="modal-content center-align row">
+          <h3>Mobilizar Gastos</h3>
+          <div class="input-field col m6">
+            <label for="date">Data</label>
+            <input type="text" name="Data"class="datepicker mobans" id="date">
+          </div>
+          <div class="input-field col m6">
+            <label for="time">Horário</label>
+            <input type="text" name="Horário" class="timepicker mobans" id="time">
+          </div>
+          <div class="input-field col m12">
+            <label for="time">Valor</label>
+            <input type="number" class="mobans" id="ValorMob" name="Valor" placeholder="10,00">
+          </div>
+          <div class="input-field col m6">
+            <select name="Razão Mobilização" id="RazaoMob" class="mobans">
+                <option value="" disabled selected>Escolha uma opção</option>
+                <option value="Entrada">Entrada</option>
+                <option value="Lazer">Lazer</option>
+                <option value="Educação">Educação</option>
+                <option value="Contas">Contas</option>
+                <option value="Alimentação">Alimentação</option>
+                <option value="Outras">Outras</option>
+              </select>
+              <label>Razão Mobilização</label>
+          </div>
+          <div class="input-field col m6">
+            <select class="mobans" id="TipoMob" name="Razão Mobilização">
+                <option value="" disabled selected>Escolha uma opção</option>
+                <option value="Cartão de Credito">Cartão de Credito</option>
+                <option value="Cartão de Débito">Cartão de Débito</option>
+                <option value="Dinheiro">Dinheiro</option>
+                <option value="Transferência">Transferência</option>
+                <option value="Outras">Outras</option>
+              </select>
+              <label>Tipo de Mobilização</label>
+          </div>
+          <div class="input-field col m12">
+            <button onclick="mobilizar()" class="btn yellow darken-1">Salvar</button>
+          </div>
+        </div>
+    </div>
+    <div id="modal1" class="modal">
+        <div class="modal-content "> 
+            <div class="container">
+                <div class="row center">
+                    <h4><strong>Registrar uma nova conta</strong></h4>
+                      <form action="" class="col m8 center-align">
+                        <div class="input-field col s8">
+                            <input placeholder="000000" name="Número da conta" id="account_number" type="text" class="validate accans">
+                            <label for="account_name">Número da Conta</label>
+                        </div>
+                        <div class="input-field col s4">
+                            <input placeholder="000000" name="Agência" id="account_agency" type="text" class="validate accans">
+                            <label for="account_name">Agência</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <select id="account_type" name="Tipo de conta" class="accans">
+                              <option value="" disabled selected>Selecione uma opção</option>
+                              <option value="Conta Corrente">Conta Corrente</option>
+                              <option value="Poupança">Poupança</option>
+                            </select>
+                            <label>Tipo de Conta</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input placeholder="00,00" name="Saldo" id="account_money" type="number" class="validate accans">
+                            <label for="account_money">Saldo</label>
+                      </div>
+                      </form>
+                  </div>
+            </div>
+          
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-red btn left  red darken-1">Cancelar</a>
+          <button type="button" onclick="registrar()" class=" waves-effect waves-green btn btn green accent-3">Salvar</button>
+        </div>
+      </div>
+      <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js">
+        
+      </script>
+    <script>
+         M.AutoInit();
+         $(document).ready(function(){
+         $('.currency').mask('#.##0,00', {reverse: true});
+         $('.sidenav').sidenav();
+         $('.modal').modal();
+         $('.tap-target').tapTarget();
+         $('.datepicker').datepicker();
+         $('.timepicker').timepicker();
+         })
+    </script>
+    <script src="../js/contas.js"></script>
+</body>
+</html>

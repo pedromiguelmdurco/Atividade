@@ -1,0 +1,29 @@
+body{
+    background: #cdcdd1;
+}
+
+
+#page-home {
+    background-image: url(./) no-repeat;
+    height: 100vh;
+    background-position: 35vw bottom;
+}
+#page-home header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#page-home .caixa{
+    width: 90%; 
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+#page-home .caixa a {
+    text-decoration: none;
+}
+
+#page-home .caixa a span{
+    display: inline;
+}

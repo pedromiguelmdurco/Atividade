@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Okita Hokusai</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/7fc800e0b1.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../Assets/deviant-art.png">
+</head>
+<body>
+    <header>
+      <ul id="slide-out" class="sidenav">
+        <li><div class="user-view">
+          <div class="background">
+            <img src="../Assets/profile-bg.jpg">
+          </div>
+          <a href="#user"><img class="circle" src="../Assets/profile.jfif"></a>
+          <a href="#name"><span class="white-text name">Okita Hokusai</span></a>
+          <a href="#email"><span class="white-text email">21800014@aluno.cotemig.com.br</span></a>
+        </div></li>
+        <li><a href="adm_profile.html"><i class="fas fa-user-circle"></i>Perfil</a></li>
+        <li><a href="adm_users.html"><i class="fas fa-signal"></i>Usuários</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Contas</a></li>
+        <li><a class="waves-effect" href="adm_conta.html">Minhas Contas</a></li>
+        <li><a class="waves-effect" href="#!">Ajuda</a></li>
+      </ul>
+    </header>
+    <main class="container">
+        <section class="row">
+            <div>
+                <a href="#" data-target="slide-out" class="yellow darken-1 btn sidenav-trigger"><i class="fas fa-bars"></i></a>  
+                <p>Meu Perfil</p>
+                <a href="../index.html"><i class="fas fa-sign-in-alt"></i>Sair</a>
+            </div>
+        </section>
+        <section class="container"></section>
+        <div class="container">
+            <div class="row">
+                <form class="col s12 z-depth-2" style="padding: 35px;padding-bottom: 0px;">
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input placeholder="Okita " id="first_name" type="text" class="validate">
+                      <label for="first_name">Nome</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <input id="last_name" type="text" class="validate" placeholder="Hokusai">
+                      <label for="last_name">Sobrenome</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input  value="" id="password" type="password" class="validate" >
+                      <label for="senha">Senha</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="email" type="email" class="validate" placeholder="21800014@aluno.cotemig.com.br">
+                      <label for="email">Email</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="phone" type="number" class="validate" placeholder="31989093846" maxlength="15" >
+                      <label id="phone">Telefone</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                        <div class="input-field col s12">
+                          <input id="cep" type="number" class="validate" placeholder="31989093846" maxlength="8" >
+                          <label id="cep">CEP</label>
+                        </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12 center">
+                        <button type="submit" class=" btn btn-large yellow darken-1"><strong>Salvar</strong></button>
+                    </div>
+                </form>
+              </div>
+        </div>
+    </main>
+    
+    <script>
+         M.AutoInit();
+         $(document).ready(function(){
+         $('.sidenav').sidenav();
+         })
+    </script>
+</body>
+</html>

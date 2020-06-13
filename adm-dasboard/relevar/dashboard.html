@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem Vindo - Okita Hokusai</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://kit.fontawesome.com/7fc800e0b1.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../Assets/deviant-art.png">
+</head>
+<body onload="load()">
+    <header>
+            <ul id="slide-out" class="sidenav">
+                <li><div class="user-view">
+                  <div class="background">
+                    <img src="../Assets/profile-bg.jpg">
+                  </div>
+                  <a href="#user"><img class="circle" src="../Assets/profile.jfif"></a>
+                  <a href="#name"><span id="nome" class="white-text name"></span></a>
+                  <a href="#email"><span id="email" class="white-text email"></span></a>
+                </div></li>
+                <li><a href="profile.html"><i class="fas fa-user-circle"></i>Perfil</a></li>
+                <li><a href="#!"><i class="fas fa-signal"></i>Usuários</a></li>
+                <li><div class="divider"></div></li>
+                <li><a class="subheader">Contas</a></li>
+                <li><a class="waves-effect" href="conta.html">Minhas Contas</a></li>
+                <li><a class="waves-effect" href="#!">Ajuda</a></li>
+              </ul>
+    </header>
+    <main class="container">
+        <section class="row">
+            <div>
+                <a href="#" data-target="slide-out" class="yellow darken-1  btn sidenav-trigger"><i class="fas fa-bars"></i></a>  
+                <a href="../index.html"><i class="fas fa-sign-in-alt"></i>Sair</a>
+            </div>
+        </section>
+        <section class="row">
+            <div class="">
+                <h3>Que tal ir ver suas contas?</h3>
+                <p>Já que não tem notícias...</p>
+                <h1>¯\_(ツ)_/¯</h1>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+         M.AutoInit();
+         $(document).ready(function(){
+         $('.sidenav').sidenav();
+         })
+
+         document.getElementById('Id1').placeholder=`${variavel}`
+    </script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

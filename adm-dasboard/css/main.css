@@ -1,0 +1,175 @@
+body{
+    background-color:var(--night-mode);
+    overflow: hidden;
+    
+}
+
+:root{
+    --amarelo:#fdd835;
+    --night-mode: rgb(255, 255, 255);
+    --purple: #4a148c;
+}
+
+.sidenav{
+    background-color: rgb(255, 255, 255);
+}
+.sidenav  li a{
+    color: rgb(0, 0, 0);
+    
+}
+.sidenav  li a i {
+    margin-right: 5px;
+    color: rgb(0, 0, 0);
+}
+
+.container section div{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    align-content: center;
+    width: 100%;
+    
+}
+.container section div p{
+    margin: auto;
+    margin-right: 0;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.container section div a {
+    margin-top: auto;
+}
+.container section div a i {
+ margin-right: 5px;
+}
+.container section div a+a{
+    text-decoration: none;
+    margin: 5px auto ;
+}
+.container section div a:last-child{
+    margin: auto;
+    margin-right: 5px;
+    text-decoration: none;
+    color:black;
+    font-weight: bolder;
+}
+
+.container section:last-child div{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 300px;
+    max-height: 800px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.container div form {
+    margin-top: 100px;
+    background-color: white;
+    border-radius: 7px;
+ 
+}
+
+.history-account {
+    overflow-y:scroll;
+    height: 200px;
+    padding: 5px;
+}
+b{
+    color: black;
+}
+.history-account p.minus {
+    color:red;
+}
+
+
+.history-account p.plus{
+    color:green;
+}
+
+.datepicker-date-display , .timepicker-digital-display {
+    background-color: #fdd835;
+}
+
+
+#modal2{
+    padding: 50px;
+    height: 500px;
+}
+
+.nav-content .nav-wrapper ul li a i {
+    margin-right: 10px;
+    
+} 
+.nav-content .nav-wrapper ul li a{
+    
+}
+.brand-logo{
+    margin-left: 30px;
+}
+
+
+.caixateste{
+    border: solid white;
+}
+.container div  ul li a i {
+ margin-right: 10px;
+}
+
+img{
+    height: 300px;
+    width: 600px;
+}
+
+.infos-graph{
+    color: black;
+}
+.infos-graph p b {
+    color: black;
+}
+.infos-graph p {
+    font-size: 20px;
+}
+
+.tabs  {
+    justify-content: center;
+    display: flex;
+    overflow: hidden;
+    white-space: normal;
+    margin: 20px auto;
+    height: 50px;
+    background-color: var(--night-mode);
+}
+.tab {
+   margin-right: 10px;
+}
+
+ .categorias li {
+     font-size: 30px;
+    
+ }
+ .categorias li p button {
+     margin-left: 10px;
+ }
+.input-field input {
+    color: ;
+}
+
+.container div form{
+    background-color: var(--purple);
+    color: white;
+    padding: 20px 50px 50px 50px;
+    height: 450px;
+} 
+
+#salvar {
+    color: var(--purple);
+    font-weight: bolder;
+}
+
+
+
+
+@media 
